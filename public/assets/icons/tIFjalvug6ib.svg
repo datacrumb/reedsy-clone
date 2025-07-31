@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Rectangle</title>
+    <g id="App-🏡" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-11-Pro" transform="translate(-127.000000, -342.000000)" fill="#FFFFFF">
+            <g id="Group-3-Copy" transform="translate(107.000000, 327.000000)">
+                <path d="M23.1443755,15.3562904 L33.2498737,22.3524046 C34.1597655,22.9823297 34.3867234,24.2305979 33.7567983,25.1404897 C33.6196702,25.3385635 33.4479476,25.5102861 33.2498737,25.6474142 L23.1443755,32.6435284 C22.2344837,33.2734535 20.9862155,33.0464956 20.3562904,32.1366038 C20.1242913,31.801494 20,31.4036045 20,30.9960236 L20,17.0037952 C20,15.8971297 20.8971297,15 22.0037952,15 C22.4113761,15 22.8092657,15.1242913 23.1443755,15.3562904 Z" id="Rectangle"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="v1" transform="translate(-272.000000, -16.000000)" fill="#FFFFFF">
+            <g id="tick" transform="translate(272.000000, 16.000000)">
+                <path d="M15.3640215,0.768949421 C14.6741437,0.311696071 13.7038708,0.452637692 13.2002177,1.07665403 L5.3692582,10.7951705 L2.76422885,7.80742334 C2.23306527,7.20062125 1.25961807,7.09733579 0.588785974,7.57610694 C-0.0831042125,8.0548781 -0.196320354,8.93818398 0.333785132,9.54283429 L5.46871911,15.4333333 L15.7026118,2.72706965 C16.206265,2.10090153 16.0549574,1.22512688 15.3640215,0.768949421" id="icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>
