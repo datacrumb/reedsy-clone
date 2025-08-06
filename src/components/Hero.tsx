@@ -151,19 +151,19 @@ const Hero = () => {
               </div>
 
               {/* Main Title */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-rubik text-white leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl lora-bold text-white leading-tight">
                 How to Crack<br />
                 Your Interview
               </h1>
 
               {/* Description Paragraphs */}
               <div className="space-y-4">
-                <p className="text-lg md:text-xl text-white leading-relaxed">
+                <p className="text-md md:text-lg rubik-bold text-white leading-relaxed">
                   Land your dream job. Join our Interview Prep<br />
                   Masterclass and build confidence, clarity, and answers<br />
                   that impress!
                 </p>
-                <p className="text-lg md:text-xl text-white leading-relaxed">
+                <p className="text-md md:text-lg rubik-bold text-white leading-relaxed">
                   We're launching this powerful course soon! Get on our<br />
                   exclusive waiting list and be the first to know when it<br />
                   goes live.
