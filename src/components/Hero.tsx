@@ -46,8 +46,7 @@ const Hero = () => {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/learning" className="text-2xl font-bold">
-                <span className="text-[#edac01]">reedsy</span>
-                <span className="text-white">learning</span>
+                <span className="text-white">DataCrumbs</span>
               </Link>
             </div>
 
@@ -130,28 +129,31 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row items-center min-h-[calc(100vh-200px)]">
           {/* Left Side - Text Content */}
-          <div className="w-full lg:w-1/2 space-y-6 lg:space-y-8 order-2 lg:order-1">
-            {/* VIDEO COURSE Label */}
+          <div className="w-full lg:w-1/2 space-y-3 order-2 lg:order-1">
+            {/* Career Bootcamp Label */}
             <div>
               <span className="text-sm font-medium text-gray-300 uppercase tracking-wider">
-                Video Course
+                Career Bootcamp
               </span>
             </div>
 
             {/* Main Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              How to Write a Novel
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+              How to Crack<br />
+              Your Interview
             </h1>
 
             {/* Description Paragraphs */}
             <div className="space-y-4">
               <p className="text-lg md:text-xl text-white leading-relaxed">
-                Your story matters. Join Tom Bromley for a writing masterclass and
-                finish your first draft in 101 days.
+                Land your dream job. Join our Interview Prep<br />
+                Masterclass and build confidence, clarity, and answers<br />
+                that impress!
               </p>
               <p className="text-lg md:text-xl text-white leading-relaxed">
-                We're making this course even better! Join our exclusive waiting
-                list and be first in line when the updated version launches.
+                We're launching this powerful course soon! Get on our<br />
+                exclusive waiting list and be the first to know when it<br />
+                goes live.
               </p>
             </div>
 
@@ -166,7 +168,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="bg-gray-800/80 backdrop-blur-sm border-gray-600 text-white hover:bg-gray-700/80 font-semibold px-8 py-4 rounded-md text-lg"
+                className="bg-gray-800/80 backdrop-blur-sm border-gray-600 text-white hover:text-white hover:bg-gray-700/80 font-semibold px-8 py-4 rounded-md text-lg"
                 asChild
               >
                 <Link href="/learning/auth/social_sign_in/google?sign_up_course_intent=how-to-write-a-novel&sign_up_origin=landing_page">

@@ -6,19 +6,19 @@ export default function StepsSection() {
       title: 'Learn',
       subtitle: 'Daily video lessons',
       image: '/assets/landing/learn.jpg',
-      description: 'You can achieve a lot in 3 months. Learn the foundations of writing and storytelling through daily video masterclasses with Tom Bromley.'
+      description: "Unlock a new skill each day, from mastering body language to answering tough interview questions. Learn through expert-led video lessons designed to build your confidence"
     },
     {
-      title: 'Write',
-      subtitle: 'Finish your first draft',
+      title: 'Practice',
+      subtitle: 'Mock Interviews',
       image: '/assets/landing/write.jpg',
-      description: 'Structure that supports you as you write your first draft. Stay accountable, get feedback, and apply what you learn as you write.'
+      description: 'Simulate real interview scenarios with hands-on practice sessions. Build powerful answers using proven frameworks and get personalized feedback'
     },
     {
       title: 'Engage',
-      subtitle: 'Forum & live webinars',
+      subtitle: 'Live webinars',
       image: '/assets/landing/engage.jpg',
-      description: 'Meet and chat with your fellow classmates, and join expert writing coaches and authors for weekly webinars in our members\' forum.'
+      description: 'Connect directly with recruiters and HR experts in live sessions. Ask questions, get insights into hiring trends, and engage with a community of like-minded job seekers.'
     }
   ];
 
