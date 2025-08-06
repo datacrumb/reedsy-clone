@@ -46,60 +46,62 @@ export default function ExplainerSections() {
   ];
 
   return (
-    <div className="space-y-10 bg-[#eff2f3]">
-      {explainers.map((explainer, index) => (
-        <section key={index} className="py-10 lg:py-10">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className={`max-w-7xl mx-auto ${explainer.reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
-              } flex flex-col lg:flex-row items-center gap-12 lg:gap-16`}>
+    <div className='bg-[#eff2f3] w-full'>
+      <div className="space-y-10 bg-[#eff2f3] max-w-screen-2xl mx-auto px-20">
+        {explainers.map((explainer, index) => (
+          <section key={index} className="py-10 lg:py-10">
+            <div className="container mx-auto px-4 lg:px-8">
+              <div className={`max-w-7xl mx-auto ${explainer.reversed ? 'lg:flex-row-reverse' : 'lg:flex-row'
+                } flex flex-col lg:flex-row items-center gap-12 lg:gap-16`}>
 
-              {/* Content */}
-              <div className="flex-1 space-y-4">
-                <div className="space-y-2">
-                  <h5 className="text-yellow-600 font-semibold text-sm uppercase tracking-wider">
-                    {explainer.title}
-                  </h5>
-                  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-                    {explainer.subtitle}
-                  </h2>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                    {explainer.description}
-                  </p>
-                </div>
+                {/* Content */}
+                <div className="flex-1 space-y-4">
+                  <div className="space-y-2">
+                    <h5 className="text-yellow-600 font-semibold text-sm uppercase tracking-wider">
+                      {explainer.title}
+                    </h5>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                      {explainer.subtitle}
+                    </h2>
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      {explainer.description}
+                    </p>
+                  </div>
 
-                {/* Features */}
-                <div className="space-y-4">
-                  {explainer.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-start space-x-4 group">
-                      <div className="flex-shrink-0 w-6 h-6 bg-yellow-500 rounded-sm flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform duration-200">
-                        <Check className="w-4 h-4 text-white" />
+                  {/* Features */}
+                  <div className="space-y-4">
+                    {explainer.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-start space-x-4 group">
+                        <div className="flex-shrink-0 w-6 h-6 bg-yellow-500 rounded-sm flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform duration-200">
+                          <Check className="w-4 h-4 text-white" />
+                        </div>
+                        <p className="text-gray-700 leading-relaxed">
+                          {feature}
+                        </p>
                       </div>
-                      <p className="text-gray-700 leading-relaxed">
-                        {feature}
-                      </p>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Image */}
-              <div className="flex-1">
-                <div className="relative group">
-                  <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden group-hover:shadow-3xl transition-all duration-300">
-                    <Image
-                      src={explainer.image}
-                      alt={explainer.title}
-                      width={500}
-                      height={300}
-                      className="w-full h-auto object-cover"
-                    />
+                {/* Image */}
+                <div className="flex-1">
+                  <div className="relative group">
+                    <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden group-hover:shadow-3xl transition-all duration-300">
+                      <Image
+                        src={explainer.image}
+                        alt={explainer.title}
+                        width={500}
+                        height={300}
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        ))}
+      </div>
     </div>
   );
 } 

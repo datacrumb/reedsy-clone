@@ -102,44 +102,46 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-[#1b242b] text-white">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Frequently asked questions
-            </h2>
-            <p className="text-xl text-gray-200">
-              Everything you need to know about the course
-            </p>
-          </div>
+    <div className='w-full bg-[#1b242b]'>
+      <section className="py-16 lg:py-24 px-20 max-w-screen-2xl mx-auto text-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                Frequently asked questions
+              </h2>
+              <p className="text-xl text-gray-200">
+                Everything you need to know about the course
+              </p>
+            </div>
 
-          {/* FAQ Accordion */}
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq) => (
-              <AccordionItem 
-                key={faq.id} 
-                value={faq.id}
-                className="bg-[#26343f] rounded-lg border border-[#1d2730] overflow-hidden"
-              >
-                <AccordionTrigger className="px-6 py-6 text-left hover:bg-[#1d2730] transition-colors duration-200 [&[data-state=open]>div]:text-yellow-400">
-                  <h4 className="text-lg font-semibold text-white pr-4">
-                    {faq.question}
-                  </h4>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6">
-                  <div className="pt-4 border-t border-[#1d2730]">
-                    <p className="text-gray-200 leading-relaxed whitespace-pre-line">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+            {/* FAQ Accordion */}
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq) => (
+                <AccordionItem
+                  key={faq.id}
+                  value={faq.id}
+                  className="bg-[#26343f] rounded-lg border border-[#1d2730] overflow-hidden"
+                >
+                  <AccordionTrigger className="px-6 py-6 text-left hover:bg-[#1d2730] transition-colors duration-200 [&[data-state=open]>div]:text-yellow-400">
+                    <h4 className="text-lg font-semibold text-white pr-4">
+                      {faq.question}
+                    </h4>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-6">
+                    <div className="pt-4 border-t border-[#1d2730]">
+                      <p className="text-gray-200 leading-relaxed whitespace-pre-line">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 } 

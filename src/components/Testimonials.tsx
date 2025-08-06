@@ -83,85 +83,86 @@ export default function Testimonials() {
   }, [api]);
 
   return (
-    <section className="py-8 lg:py-12 bg-[#12191f] text-white overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Student Reviews
-            </h2>
-          </div>
+    <div className='w-full bg-[#12191f]'>
+      <section className="py-8 lg:py-12 max-w-screen-2xl px-20 mx-auto text-white overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+                Student Reviews
+              </h2>
+            </div>
 
-          {/* Testimonials Carousel */}
-          <div className="relative">
-            <Carousel
-              setApi={setApi}
-              className="w-full"
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-            >
-              <CarouselContent>
-                {testimonials.map((testimonial, index) => (
-                  <CarouselItem key={index}>
-                    <div className="px-12 lg:px-16">
-                      <div className="text-center space-y-8">
-                        {/* Quote */}
-                        <blockquote className="text-2xl lg:text-3xl font-bold text-white leading-relaxed">
-                          "{testimonial.quote}"
-                        </blockquote>
+            {/* Testimonials Carousel */}
+            <div className="relative">
+              <Carousel
+                setApi={setApi}
+                className="w-full"
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+              >
+                <CarouselContent>
+                  {testimonials.map((testimonial, index) => (
+                    <CarouselItem key={index}>
+                      <div className="px-12 lg:px-16">
+                        <div className="text-center space-y-8">
+                          {/* Quote */}
+                          <blockquote className="text-2xl lg:text-3xl font-bold text-white leading-relaxed">
+                            "{testimonial.quote}"
+                          </blockquote>
 
-                        {/* Text */}
-                        <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                          {testimonial.text}
-                        </p>
-
-                        {/* Author & Stars */}
-                        <div className="flex items-center justify-end space-x-4">
-                          <p className="font-semibold text-white">
-                            {testimonial.author}
+                          {/* Text */}
+                          <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                            {testimonial.text}
                           </p>
-                          <div className="flex space-x-1">
-                            {[...Array(5)].map((_, i) => (
-                              <Star key={i} className="w-5 h-5 fill-[#edac01] text-[#edac01]" />
-                            ))}
+
+                          {/* Author & Stars */}
+                          <div className="flex items-center justify-end space-x-4">
+                            <p className="font-semibold text-white">
+                              {testimonial.author}
+                            </p>
+                            <div className="flex space-x-1">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="w-5 h-5 fill-[#edac01] text-[#edac01]" />
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </CarouselItem>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+
+                {/* Custom Navigation Arrows */}
+                <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-transparent">
+                  <ChevronLeft className="h-6 w-6" />
+                </CarouselPrevious>
+
+                <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-transparent">
+                  <ChevronRight className="h-6 w-6" />
+                </CarouselNext>
+              </Carousel>
+
+              {/* Dots Indicator */}
+              <div className="flex justify-center space-x-2 mt-8">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full transition-all duration-200 ${index === current
+                        ? 'bg-white scale-125'
+                        : 'bg-gray-600 hover:bg-gray-500'
+                      }`}
+                    onClick={() => api?.scrollTo(index)}
+                  />
                 ))}
-              </CarouselContent>
-
-              {/* Custom Navigation Arrows */}
-              <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-transparent">
-                <ChevronLeft className="h-6 w-6" />
-              </CarouselPrevious>
-
-              <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-transparent">
-                <ChevronRight className="h-6 w-6" />
-              </CarouselNext>
-            </Carousel>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center space-x-2 mt-8">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                    index === current 
-                      ? 'bg-white scale-125' 
-                      : 'bg-gray-600 hover:bg-gray-500'
-                  }`}
-                  onClick={() => api?.scrollTo(index)}
-                />
-              ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 } 

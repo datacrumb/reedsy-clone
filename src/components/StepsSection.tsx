@@ -23,40 +23,42 @@ export default function StepsSection() {
   ];
 
   return (
-    <section className="py-8 lg:py-10 bg-[#12191f] text-white">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-8">
-          {steps.map((step, index) => (
-            <div key={index} className="p-4 lg:p-6">
-              {/* Step Label */}
-              <div className="mb-4">
-                <h5 className="text-gray-400 font-semibold text-sm uppercase tracking-wider mb-2">
-                  {step.title}
-                </h5>
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6">
-                  {step.subtitle}
-                </h3>
-              </div>
+    <div className='w-full bg-[#12191f]'>
+      <section className="py-8 lg:py-10 bg-[#12191f] text-white max-w-screen-2xl px-20 mx-auto">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-8">
+            {steps.map((step, index) => (
+              <div key={index} className="p-4 lg:p-6">
+                {/* Step Label */}
+                <div className="mb-4">
+                  <h5 className="text-gray-400 font-semibold text-sm uppercase tracking-wider mb-2">
+                    {step.title}
+                  </h5>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6">
+                    {step.subtitle}
+                  </h3>
+                </div>
 
-              {/* Image */}
-              <div className="relative mb-6 overflow-hidden rounded-lg">
-                <Image 
-                  className="w-full h-64 object-cover" 
-                  src={step.image} 
-                  alt={step.title}
-                  width={400}
-                  height={250}
-                />
-              </div>
+                {/* Image */}
+                <div className="relative mb-6 overflow-hidden rounded-lg">
+                  <Image
+                    className="w-full h-64 object-cover"
+                    src={step.image}
+                    alt={step.title}
+                    width={400}
+                    height={250}
+                  />
+                </div>
 
-              {/* Description */}
-              <p className="text-white text-lg leading-relaxed">
-                {step.description}
-              </p>
-            </div>
-          ))}
+                {/* Description */}
+                <p className="text-white text-lg leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 } 

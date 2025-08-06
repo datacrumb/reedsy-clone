@@ -136,130 +136,132 @@ export default function CourseOverview() {
   const visibleWeeks = isExpanded ? weeks : weeks.slice(0, 4);
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-100">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6" id="course-overview">
-              Course overview
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Support that empowers you to finish writing your first draft in just 3 months.
-            </p>
-          </div>
+    <div className='bg-gray-100 w-full'>
+      <section className="py-16 lg:py-24 px-20 max-w-screen-2xl mx-auto bg-gray-100">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6" id="course-overview">
+                Course overview
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Support that empowers you to finish writing your first draft in just 3 months.
+              </p>
+            </div>
 
-          {/* Timeline */}
-          <div className="relative">
-            {/* Timeline Track */}
-            <div className="absolute left-8 top-0 bottom-0 w-2 bg-yellow-500 rounded-full"></div>
+            {/* Timeline */}
+            <div className="relative">
+              {/* Timeline Track */}
+              <div className="absolute left-8 top-0 bottom-0 w-2 bg-yellow-500 rounded-full"></div>
 
-            {/* Course Weeks */}
-            <div className="space-y-8">
-              {visibleWeeks.map((week, index) => (
-                <div key={index} className="relative pl-16">
-                  {/* Timeline Dot */}
-                  <div className="absolute left-6 top-6 w-6 h-6 bg-white rounded-full border-4 border-black shadow-lg"></div>
+              {/* Course Weeks */}
+              <div className="space-y-8">
+                {visibleWeeks.map((week, index) => (
+                  <div key={index} className="relative pl-16">
+                    {/* Timeline Dot */}
+                    <div className="absolute left-6 top-6 w-6 h-6 bg-white rounded-full border-4 border-black shadow-lg"></div>
 
-                  {/* Week Content */}
-                  <div className="rounded-2xl p-6 lg:p-8">
-                    <div className="mb-4">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                        {week.week}
-                      </h4>
-                    </div>
+                    {/* Week Content */}
+                    <div className="rounded-2xl p-6 lg:p-8">
+                      <div className="mb-4">
+                        <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                          {week.week}
+                        </h4>
+                      </div>
 
-                    {week.isPrep ? (
-                      <div className="bg-amber-200 border border-amber-500 rounded-xl p-6">
-                        <div className="flex items-center justify-start gap-2 mb-4">
-                          <h4 className="text-xl font-bold text-gray-900">
-                            {week.title}
-                          </h4>
-                          <span className="bg-yellow-500 text-white text-md font-md px-3 py-1 rounded-full">
-                            Available today
-                          </span>
-                        </div>
-                        <p className="text-gray-700 mb-6">{week.description}</p>
-                        
-                        {/* Prep Sessions */}
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                          {week.sessions?.map((session, sessionIndex) => (
-                            <div key={sessionIndex} className="text-center group">
-                                <Image 
-                                  src={session.icon} 
+                      {week.isPrep ? (
+                        <div className="bg-amber-200 border border-amber-500 rounded-xl p-6">
+                          <div className="flex items-center justify-start gap-2 mb-4">
+                            <h4 className="text-xl font-bold text-gray-900">
+                              {week.title}
+                            </h4>
+                            <span className="bg-yellow-500 text-white text-md font-md px-3 py-1 rounded-full">
+                              Available today
+                            </span>
+                          </div>
+                          <p className="text-gray-700 mb-6">{week.description}</p>
+
+                          {/* Prep Sessions */}
+                          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                            {week.sessions?.map((session, sessionIndex) => (
+                              <div key={sessionIndex} className="text-center group">
+                                <Image
+                                  src={session.icon}
                                   alt={session.name}
                                   width={250}
                                   height={250}
                                   className="mx-auto mb-2"
                                 />
-                              <h5 className="text-sm font-medium text-gray-900">{session.name}</h5>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ) : week.title ? (
-                      <div className="flex flex-col lg:flex-row gap-6 bg-white rounded-md p-6">
-                        <div className="flex-shrink-0">
-                          <div className="bg-gray-100 rounded-xl p-4 shadow-sm">
-                            <Image 
-                              src={week.icon || ''} 
-                              alt={week.title}
-                              width={250}
-                              height={250}
-                              className="w-full h-full"
-                            />
+                                <h5 className="text-sm font-medium text-gray-900">{session.name}</h5>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                        <div className="flex-1">
-                          <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                            {week.title}
-                          </h3>
-                          <p className="text-gray-700 mb-4 leading-relaxed">
-                            {week.description}
-                          </p>
-                          {week.topics && (
-                            <div className="p-4">
-                              <p className="text-sm font-medium">
-                                {week.topics}
-                              </p>
+                      ) : week.title ? (
+                        <div className="flex flex-col lg:flex-row gap-6 bg-white rounded-md p-6">
+                          <div className="flex-shrink-0">
+                            <div className="bg-gray-100 rounded-xl p-4 shadow-sm">
+                              <Image
+                                src={week.icon || ''}
+                                alt={week.title}
+                                width={250}
+                                height={250}
+                                className="w-full h-full"
+                              />
                             </div>
-                          )}
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                              {week.title}
+                            </h3>
+                            <p className="text-gray-700 mb-4 leading-relaxed">
+                              {week.description}
+                            </p>
+                            {week.topics && (
+                              <div className="p-4">
+                                <p className="text-sm font-medium">
+                                  {week.topics}
+                                </p>
+                              </div>
+                            )}
+                          </div>
                         </div>
-                      </div>
-                    ) : (
-                      <p className="text-gray-700 leading-relaxed">{week.description}</p>
-                    )}
+                      ) : (
+                        <p className="text-gray-700 leading-relaxed">{week.description}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            {/* Expand/Collapse Button */}
-            <div className="text-center mt-12">
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="bg-white border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
-              >
-                <span className="flex items-center space-x-2">
-                  {isExpanded ? (
-                    <>
-                      <ChevronUp className="w-5 h-5" />
-                      <span>Hide outline</span>
-                    </>
-                  ) : (
-                    <>
-                      <ChevronDown className="w-5 h-5" />
-                      <span>View full outline</span>
-                    </>
-                  )}
-                </span>
-              </Button>
+              {/* Expand/Collapse Button */}
+              <div className="text-center mt-12">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="bg-white border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-8 py-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-200"
+                >
+                  <span className="flex items-center space-x-2">
+                    {isExpanded ? (
+                      <>
+                        <ChevronUp className="w-5 h-5" />
+                        <span>Hide outline</span>
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown className="w-5 h-5" />
+                        <span>View full outline</span>
+                      </>
+                    )}
+                  </span>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 } 
