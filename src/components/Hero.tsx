@@ -36,7 +36,7 @@ const Hero = () => {
 
   return (
     <div className='w-full bg-[#12191f]'>
-      <div className="relative min-h-screen max-w-screen-2xl mx-auto px-20 text-white overflow-hidden">
+      <div className="relative min-h-screen max-w-screen-2xl mx-auto md:px-20 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image

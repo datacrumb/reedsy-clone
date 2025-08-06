@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 export default function InstructorSection() {
   return (
     <div className='w-full bg-[#eff2f3]'>
-      <section className="py-10 text-white bg-[#eff2f3] px-20 max-w-screen-2xl mx-auto">
+      <section className="py-10 text-white bg-[#eff2f3] md:px-20 max-w-screen-2xl mx-auto">
         <div className="container mx-auto px-4 lg:px-8 py-10 rounded-xl bg-gray-900">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">

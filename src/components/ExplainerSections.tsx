@@ -47,7 +47,7 @@ export default function ExplainerSections() {
 
   return (
     <div className='bg-[#eff2f3] w-full'>
-      <div className="space-y-10 bg-[#eff2f3] max-w-screen-2xl mx-auto px-20">
+      <div className="space-y-10 bg-[#eff2f3] max-w-screen-2xl mx-auto md:px-20">
         {explainers.map((explainer, index) => (
           <section key={index} className="py-10 lg:py-10">
             <div className="container mx-auto px-4 lg:px-8">

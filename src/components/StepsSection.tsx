@@ -24,7 +24,7 @@ export default function StepsSection() {
 
   return (
     <div className='w-full bg-[#12191f]'>
-      <section className="py-8 lg:py-10 bg-[#12191f] text-white max-w-screen-2xl px-20 mx-auto">
+      <section className="py-8 lg:py-10 bg-[#12191f] text-white max-w-screen-2xl md:px-20 mx-auto">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-8">
             {steps.map((step, index) => (

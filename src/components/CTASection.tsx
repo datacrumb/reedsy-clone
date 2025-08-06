@@ -14,7 +14,7 @@ export default function CTASection() {
 
   return (
     <div className=' bg-gradient-to-b from-[#1b242b] to-[#12191f]'>
-      <section className="py-16 lg:py-24 px-20 max-w-screen-2xl mx-auto text-white border-b border-gray-700">
+      <section className="py-16 lg:py-24 md:px-20 max-w-screen-2xl mx-auto text-white border-b border-gray-700">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Header */}

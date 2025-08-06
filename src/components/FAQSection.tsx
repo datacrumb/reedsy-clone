@@ -103,7 +103,7 @@ export default function FAQSection() {
 
   return (
     <div className='w-full bg-[#1b242b]'>
-      <section className="py-16 lg:py-24 px-20 max-w-screen-2xl mx-auto text-white">
+      <section className="py-16 lg:py-24 md:px-20 max-w-screen-2xl mx-auto text-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {/* Header */}

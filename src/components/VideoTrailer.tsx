@@ -1,7 +1,7 @@
 export default function VideoTrailer() {
   return (
     <div className='w-full bg-[#12191f]'>
-      <section id="video-trailer" className="py-16 lg:py-24 px-20 bg-[#12191f] max-w-screen-2xl mx-auto">
+      <section id="video-trailer" className="py-16 lg:py-24 md:px-20 bg-[#12191f] max-w-screen-2xl mx-auto">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {/* Video Container */}

@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function WebinarsSection() {
   return (
     <div className='w-full bg-[#eff2f3]'>
-      <section className="py-16 lg:py-24 px-20 max-w-screen-2xl mx-auto bg-[#eff2f3]">
+      <section className="py-16 lg:py-24 md:px-20 max-w-screen-2xl mx-auto bg-[#eff2f3]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">

@@ -84,7 +84,7 @@ export default function Testimonials() {
 
   return (
     <div className='w-full bg-[#12191f]'>
-      <section className="py-8 lg:py-12 max-w-screen-2xl px-20 mx-auto text-white overflow-hidden">
+      <section className="py-8 lg:py-12 max-w-screen-2xl md:px-20 mx-auto text-white overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto">
             {/* Header */}

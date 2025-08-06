@@ -137,7 +137,7 @@ export default function CourseOverview() {
 
   return (
     <div className='bg-gray-100 w-full'>
-      <section className="py-16 lg:py-24 px-20 max-w-screen-2xl mx-auto bg-gray-100">
+      <section className="py-16 lg:py-24 md:px-20 max-w-screen-2xl mx-auto bg-gray-100">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
